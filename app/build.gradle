@@ -78,6 +78,7 @@ kapt {
 
 dependencies {
     api project(':aserbaoffmpeg')
+    api project(path: ':thirdlibs')
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation rootProject.ext.dependencies["appcompat"]
@@ -85,6 +86,7 @@ dependencies {
     api project(path: ':base')
     implementation project(path: ':arouter')
     implementation project(path: ':jetpack')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
 
     api rootProject.ext.dependencies["kotlin"]
